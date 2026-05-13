@@ -855,14 +855,20 @@ section, footer {
 }
 
 /* ── Custom Cursor ───────────────────────────────────────── */
-body.custom-cursor,
-body.custom-cursor a,
-body.custom-cursor button,
-body.custom-cursor .service-card,
-body.custom-cursor .gallery-item,
-body.custom-cursor .taller-item,
-body.custom-cursor .modal-item {
-    cursor: none !important;
+@media (min-width: 1025px) {
+    body.custom-cursor,
+    body.custom-cursor a,
+    body.custom-cursor button,
+    body.custom-cursor .service-card,
+    body.custom-cursor .gallery-item,
+    body.custom-cursor .taller-item,
+    body.custom-cursor .modal-item {
+        cursor: none !important;
+    }
+}
+
+@media (max-width: 1024px) {
+    #cursor-dot, #cursor-ring { display: none !important; }
 }
 
 #cursor-dot {

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carpintería de Aluminio a Medida | Aluminios Leo</title>
     <meta name="description" content="Carpintería de aluminio a medida. Puertas, ventanas, portones, cerramientos y más. Somos fabricantes con más de 20 años de experiencia. Calidad y colocación gratuita.">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=3">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <div id="scroll-progress"></div>
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
     <!-- Navbar -->
     <header class="navbar">
         <div class="container nav-content">
@@ -22,20 +25,45 @@
             <nav class="nav-links">
                 <a href="#quienes-somos">Quiénes Somos</a>
                 <a href="#servicios">Servicios</a>
+                <a href="#trabajos">Trabajos</a>
                 <a href="#beneficios">Por qué elegirnos</a>
             </nav>
             <div class="nav-cta">
                 <a href="javascript:void(0)" id="open-menu" class="btn btn-primary">Consúltanos</a>
             </div>
+            <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+        <div class="mobile-menu-inner">
+            <a href="#quienes-somos" class="mobile-link">Quiénes Somos</a>
+            <a href="#servicios" class="mobile-link">Servicios</a>
+            <a href="#trabajos" class="mobile-link">Trabajos</a>
+            <a href="#beneficios" class="mobile-link">Por qué elegirnos</a>
+            <a href="tel:+542216039168" class="mobile-link mobile-phone-link">
+                <i class="fa-solid fa-phone"></i> 221 603-9168
+            </a>
+            <a href="https://wa.me/5492216039168?text=Hola!%20Quisiera%20solicitar%20un%20presupuesto." target="_blank" rel="noopener noreferrer" class="btn btn-primary mobile-wsp-btn">
+                <i class="fa-brands fa-whatsapp"></i> Consultanos por WhatsApp
+            </a>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero" id="inicio">
         <div class="container hero-content">
             <div class="hero-text fade-in">
                 <span class="label uppercase accent-text">Arquitectura en Aluminio</span>
-                <h2 class="display-lg">CARPINTERÍA DE ALUMINIO A MEDIDA.<br><span class="accent-text">ALUMINIOS LEO.</span></h2>
+                <h2 class="display-lg">
+                    <span class="reveal-wrap"><span class="reveal-text">CARPINTERÍA DE ALUMINIO A MEDIDA.</span></span>
+                    <span class="reveal-wrap"><span class="reveal-text delay-1 accent-text">ALUMINIOS LEO.</span></span>
+                </h2>
                 <p class="body-lg">Realizamos aberturas, puertas, ventanas, portones, cortinas, techos, jardines de invierno y más. Trabajamos con estándares de precisión industrial y acabados de lujo.</p>
                 <div class="hero-actions">
                     <a href="#contacto" class="btn btn-primary">Consúltanos</a>
@@ -44,7 +72,7 @@
             </div>
             <!-- Optional Hero Image placeholder using CSS background in a dedicated div -->
             <div class="hero-image-wrapper drop-in delay-1">
-                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200" alt="Estructura moderna de aluminio y vidrio" class="hero-image">
+                <img src="fotos/trabajo-13.jpg" alt="Jardín de invierno de aluminio realizado por Aluminios Leo" class="hero-image">
                 <div class="glass-overlay"></div>
             </div>
         </div>
@@ -54,11 +82,14 @@
     <section class="about" id="quienes-somos">
         <div class="container about-grid">
             <div class="about-image fade-in">
-                <img src="https://images.unsplash.com/photo-1541888086425-d81bb19240f5?auto=format&fit=crop&q=80&w=800" alt="Taller arquitectónico moderno">
+                <img src="fotos/trabajo-01.jpg" alt="Trabajo realizado por Aluminios Leo">
             </div>
             <div class="about-text fade-in delay-1">
                 <span class="label uppercase accent-text">Misión y Trayectoria</span>
-                <h3 class="headline-lg">Asesoramiento y Presupuesto <br>a domicilio <span class="accent-text">SIN cargo!</span></h3>
+                <h3 class="headline-lg">
+                    <span class="reveal-wrap"><span class="reveal-text">Asesoramiento y Presupuesto</span></span>
+                    <span class="reveal-wrap"><span class="reveal-text delay-1">a domicilio <span class="accent-text">SIN cargo!</span></span></span>
+                </h3>
                 <p class="body-md text-variant">Más de 20 años en el rubro, brindando calidad y seguridad a nuestros clientes.</p>
                 <div class="architectural-breadcrumb">
                     <div class="breadcrumb-item">
@@ -108,6 +139,64 @@
                     <h4 class="headline-md">Somos Fabricantes</h4>
                     <p class="body-md text-variant">Nuestros productos son de calidad, brindamos asesoramiento y presupuesto sin cargo. Consulte!</p>
                 </div>
+            </div>
+
+            <!-- Taller Strip -->
+            <div class="taller-strip fade-in">
+                <span class="label uppercase accent-text">De Nuestro Taller</span>
+                <div class="taller-grid">
+                    <div class="taller-item">
+                        <img src="productos/producto-01.jpg" alt="Ventana de aluminio fabricación propia" loading="lazy" decoding="async">
+                        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="taller-item">
+                        <img src="productos/producto-02.jpg" alt="Ventana corrediza de aluminio" loading="lazy" decoding="async">
+                        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="taller-item">
+                        <img src="productos/producto-03.jpg" alt="Puerta de aluminio con vidrio" loading="lazy" decoding="async">
+                        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="taller-item">
+                        <img src="productos/producto-04.jpg" alt="Puertas de aluminio fabricación propia" loading="lazy" decoding="async">
+                        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trabajos Realizados Section -->
+    <section class="gallery" id="trabajos">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="label uppercase accent-text">Galería</span>
+                <h3 class="headline-lg">Trabajos Realizados</h3>
+                <p class="body-md text-variant">Una muestra de nuestros proyectos: cerramientos, jardines de invierno, ventanas, puertas y más.</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item fade-in"><img src="fotos/trabajo-01.jpg" alt="Trabajo realizado" loading="lazy" decoding="async"><div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+                <div class="gallery-item fade-in delay-1"><img src="fotos/trabajo-02.jpg" alt="Trabajo realizado" loading="lazy" decoding="async"><div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+                <div class="gallery-item fade-in delay-2"><img src="fotos/trabajo-03.jpg" alt="Trabajo realizado" loading="lazy" decoding="async"><div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+                <div class="gallery-item fade-in"><img src="fotos/trabajo-04.jpg" alt="Trabajo realizado" loading="lazy" decoding="async"><div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+                <div class="gallery-item fade-in delay-1"><img src="fotos/trabajo-05.jpg" alt="Trabajo realizado" loading="lazy" decoding="async"><div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+                <div class="gallery-item fade-in delay-2"><img src="fotos/trabajo-06.jpg" alt="Trabajo realizado" loading="lazy" decoding="async"><div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+                <div class="gallery-item fade-in"><img src="fotos/trabajo-07.jpg" alt="Trabajo realizado" loading="lazy" decoding="async"><div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+                <div class="gallery-item fade-in delay-1"><img src="fotos/trabajo-08.jpg" alt="Trabajo realizado" loading="lazy" decoding="async"><div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+                <div class="gallery-item fade-in delay-2"><img src="fotos/trabajo-09.jpg" alt="Trabajo realizado" loading="lazy" decoding="async"><div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+                <div class="gallery-item fade-in"><img src="fotos/trabajo-10.jpg" alt="Trabajo realizado" loading="lazy" decoding="async"><div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+                <div class="gallery-item fade-in delay-1"><img src="fotos/trabajo-11.jpg" alt="Trabajo realizado" loading="lazy" decoding="async"><div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+                <div class="gallery-item fade-in delay-2"><img src="fotos/trabajo-12.jpg" alt="Trabajo realizado" loading="lazy" decoding="async"><div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+                <div class="gallery-item fade-in"><img src="fotos/trabajo-13.jpg" alt="Trabajo realizado" loading="lazy" decoding="async"><div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+                <div class="gallery-item fade-in delay-1"><img src="fotos/trabajo-14.jpg" alt="Trabajo realizado" loading="lazy" decoding="async"><div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+                <div class="gallery-item fade-in delay-2"><img src="fotos/trabajo-15.jpg" alt="Trabajo realizado" loading="lazy" decoding="async"><div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+                <div class="gallery-item fade-in"><img src="fotos/trabajo-16.jpg" alt="Trabajo realizado" loading="lazy" decoding="async"><div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+            </div>
+            <div class="gallery-cta fade-in">
+                <p class="body-md text-variant">¿Te gustó lo que viste? Consultanos sin cargo.</p>
+                <a href="https://wa.me/5492216039168?text=Hola!%20Vi%20sus%20trabajos%20en%20la%20web%20y%20me%20gustar%C3%ADa%20hacer%20una%20consulta." target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    <i class="fa-brands fa-whatsapp"></i> Consultanos por WhatsApp
+                </a>
             </div>
         </div>
     </section>
@@ -208,11 +297,15 @@
             <p class="body-md text-variant">Elegí tu red favorita para contactarnos:</p>
             
             <div class="modal-grid">
-                <a href="https://www.instagram.com/aluminiosleo/?fbclid=IwAR2tfXuGiaGcjc_j08C2iO5fLbCxr1_KHfiROPzRwgaMw1YfxoBMEWyLTzY" target="_blank" class="modal-item">
+                <a href="https://wa.me/5492216039168?text=Hola!%20Quisiera%20solicitar%20un%20presupuesto." target="_blank" rel="noopener noreferrer" class="modal-item">
+                    <i class="fa-brands fa-whatsapp fa-2x"></i>
+                    <span>WhatsApp</span>
+                </a>
+                <a href="https://www.instagram.com/aluminiosleo/" target="_blank" rel="noopener noreferrer" class="modal-item">
                     <i class="fa-brands fa-instagram fa-2x"></i>
                     <span>Instagram</span>
                 </a>
-                <a href="https://www.facebook.com/AluminiosLeo1/?ref=page_internal" target="_blank" class="modal-item">
+                <a href="https://www.facebook.com/AluminiosLeo1/" target="_blank" rel="noopener noreferrer" class="modal-item">
                     <i class="fa-brands fa-facebook fa-2x"></i>
                     <span>Facebook</span>
                 </a>
@@ -224,6 +317,27 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+        <button class="lightbox-close" id="lightbox-close" aria-label="Cerrar">&times;</button>
+        <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Siguiente"><i class="fa-solid fa-chevron-right"></i></button>
+        <div class="lightbox-img-wrap">
+            <img id="lightbox-img" src="" alt="" decoding="async">
+        </div>
+        <div class="lightbox-counter" id="lightbox-counter"></div>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5492216039168?text=Hola!%20Quisiera%20solicitar%20un%20presupuesto."
+       target="_blank"
+       rel="noopener noreferrer"
+       class="whatsapp-float"
+       aria-label="Contactar por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js?v=3"></script>
 </body>
 </html>

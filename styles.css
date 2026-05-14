@@ -6,14 +6,14 @@
 
 :root {
     /* Colors */
-    --background: #87CEEB;
-    --surface: #87CEEB;
-    --surface-bright: #6BBDE0;
-    --surface-container-lowest: #87CEEB;
-    --surface-container-low: #7CC4E8;
-    --surface-container: #70BAE4;
-    --surface-container-high: #63B0DF;
-    --surface-container-highest: #55A5DA;
+    --background: #74ACDF;
+    --surface: #74ACDF;
+    --surface-bright: #5C9BD4;
+    --surface-container-lowest: #74ACDF;
+    --surface-container-low: #6AA3D8;
+    --surface-container: #5F9AD2;
+    --surface-container-high: #5491CC;
+    --surface-container-highest: #4888C5;
 
     --primary: #1A1AE8;
     --primary-container: #1010C0;
@@ -148,7 +148,7 @@ img {
     top: 0;
     width: 100%;
     z-index: 100;
-    background: rgba(135, 206, 235, 0.9);
+    background: rgba(116, 172, 223, 0.9);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--outline-variant);
     transition: background 0.3s;
@@ -231,7 +231,7 @@ section, footer {
     right: -10%;
     width: 60%;
     height: 60%;
-    background: rgba(107, 189, 224, 0.4);
+    background: rgba(92, 155, 212, 0.4);
     backdrop-filter: blur(15px);
     border-left: 1px solid var(--outline-variant);
     border-top: 1px solid var(--outline-variant);

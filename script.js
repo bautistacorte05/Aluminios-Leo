@@ -59,10 +59,10 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
                 navbar.style.boxShadow = '0 10px 30px rgba(0,0,0,0.5)';
-                navbar.style.background = 'rgba(219,234,254,0.97)';
+                navbar.style.background = 'rgba(135,206,235,0.97)';
             } else {
                 navbar.style.boxShadow = 'none';
-                navbar.style.background = 'rgba(219,234,254,0.9)';
+                navbar.style.background = 'rgba(135,206,235,0.9)';
             }
         }, { passive: true });
     }

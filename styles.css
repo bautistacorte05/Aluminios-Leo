@@ -20,8 +20,8 @@
     --on-primary: #ffffff;
     --primary-gradient: linear-gradient(135deg, var(--primary) 0%, var(--primary-container) 100%);
 
-    --on-surface: #111111;
-    --on-surface-variant: #555555;
+    --on-surface: #ffffff;
+    --on-surface-variant: rgba(255, 255, 255, 0.8);
     --outline-variant: rgba(26, 26, 232, 0.2);
     
     /* Typography */

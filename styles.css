@@ -6,23 +6,23 @@
 
 :root {
     /* Colors */
-    --background: #74ACDF;
-    --surface: #74ACDF;
-    --surface-bright: #5C9BD4;
-    --surface-container-lowest: #74ACDF;
-    --surface-container-low: #6AA3D8;
-    --surface-container: #5F9AD2;
-    --surface-container-high: #5491CC;
-    --surface-container-highest: #4888C5;
+    --background: #3D5EA8;
+    --surface: #3D5EA8;
+    --surface-bright: #4A6DB5;
+    --surface-container-lowest: #3D5EA8;
+    --surface-container-low: #3A5BA5;
+    --surface-container: #3758A0;
+    --surface-container-high: #33559B;
+    --surface-container-highest: #2F5296;
 
-    --primary: #1A1AE8;
-    --primary-container: #1010C0;
-    --on-primary: #ffffff;
-    --primary-gradient: linear-gradient(135deg, var(--primary) 0%, var(--primary-container) 100%);
+    --primary: #ffffff;
+    --primary-container: #dce8ff;
+    --on-primary: #3D5EA8;
+    --primary-gradient: linear-gradient(135deg, #ffffff 0%, #dce8ff 100%);
 
     --on-surface: #ffffff;
-    --on-surface-variant: rgba(255, 255, 255, 0.8);
-    --outline-variant: rgba(26, 26, 232, 0.2);
+    --on-surface-variant: rgba(255, 255, 255, 0.75);
+    --outline-variant: rgba(255, 255, 255, 0.25);
     
     /* Typography */
     --font-family: 'Inter', sans-serif;
@@ -123,11 +123,11 @@ img {
 .btn-primary {
     background: var(--primary-gradient);
     color: var(--on-primary);
-    box-shadow: 0 4px 15px rgba(26, 26, 232, 0.25);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
 }
 
 .btn-primary:hover {
-    box-shadow: 0 6px 20px rgba(26, 26, 232, 0.45);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
     transform: translateY(-2px);
     background: linear-gradient(135deg, var(--primary-container) 0%, var(--primary) 100%);
 }
@@ -148,7 +148,7 @@ img {
     top: 0;
     width: 100%;
     z-index: 100;
-    background: rgba(116, 172, 223, 0.9);
+    background: rgba(61, 94, 168, 0.95);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--outline-variant);
     transition: background 0.3s;
@@ -231,7 +231,7 @@ section, footer {
     right: -10%;
     width: 60%;
     height: 60%;
-    background: rgba(92, 155, 212, 0.4);
+    background: rgba(30, 60, 120, 0.4);
     backdrop-filter: blur(15px);
     border-left: 1px solid var(--outline-variant);
     border-top: 1px solid var(--outline-variant);
@@ -796,7 +796,7 @@ section, footer {
     top: 50%;
     transform: translateY(-50%);
     z-index: 2001;
-    background: rgba(220, 220, 220, 0.85);
+    background: rgba(30, 60, 120, 0.85);
     border: 1px solid var(--outline-variant);
     color: var(--on-surface);
     width: 48px;
@@ -851,7 +851,7 @@ section, footer {
     background: var(--primary-gradient);
     z-index: 9999;
     transition: width 0.1s linear;
-    box-shadow: 0 0 8px rgba(26, 26, 232, 0.5);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
 }
 
 /* ── Custom Cursor ───────────────────────────────────────── */
@@ -889,7 +889,7 @@ section, footer {
     position: fixed;
     top: 0; left: 0;
     width: 36px; height: 36px;
-    border: 1.5px solid rgba(26, 26, 232, 0.5);
+    border: 1.5px solid rgba(255, 255, 255, 0.5);
     border-radius: 50%;
     pointer-events: none;
     z-index: 99998;
